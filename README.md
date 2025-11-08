@@ -1,3 +1,3 @@
 # web3-homework
 
-*> practice
+> practice
