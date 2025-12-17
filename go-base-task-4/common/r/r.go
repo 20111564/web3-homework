@@ -9,12 +9,9 @@ import (
 响应格式统一
 */
 type Response struct {
-	// 代码
-	Code int `json:"code" example:"200"`
-	// 数据集
+	Code int         `json:"code" example:"200"`
 	Data interface{} `json:"data"`
-	// 消息
-	Msg string `json:"msg"`
+	Msg  string      `json:"msg"`
 }
 
 type Page struct {
@@ -44,6 +41,14 @@ func Error(c *gin.Context, code int, err error, msg string) {
 		res.Msg = msg
 	}
 	c.AbortWithStatusJSON(http.StatusOK, res.ReturnError(code))
+}
+
+func ErrMsg(c *gin.Context, msg string) {
+	var res Response
+	if msg != "" {
+		res.Msg = msg
+	}
+	c.AbortWithStatusJSON(http.StatusOK, res.ReturnError(http.StatusBadRequest))
 }
 
 // 通常成功数据处理

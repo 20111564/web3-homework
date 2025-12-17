@@ -14,5 +14,6 @@ func GlobalError(c *gin.Context) {
 
 		}
 	}()
-	c.Next()
+	//todo 了解一下next()和abort()
+
 }
