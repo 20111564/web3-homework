@@ -1,0 +1,15 @@
+{
+  "name": "Cyberpunk City #1",
+  "description": "A unique digital artwork of a futuristic cyberpunk city.",
+  "image": "ipfs://bafybeiauoh7u5lmhxhtl3nsojzzoetlqomcqgy5mfa2fz4fqarzmmursou",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Cyberpunk"
+    },
+    {
+      "trait_type": "Year",
+      "value": "2077"
+    }
+  ]
+}
